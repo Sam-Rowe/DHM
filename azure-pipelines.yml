@@ -58,7 +58,7 @@ steps:
     rootFolderOrFile: 'dhm'
     includeRootFolder: false
     archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/dhm-django-web-app.zip'
     replaceExistingArchive: true
 
 - task: UniversalPackages@0
