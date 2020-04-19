@@ -55,7 +55,7 @@ steps:
 
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: 'dhm'
+    rootFolderOrFile: '$(Build.Repository.LocalPath)'
     includeRootFolder: false
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/dhm-django-web-app.zip'
