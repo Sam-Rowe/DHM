@@ -12,8 +12,6 @@ strategy:
   matrix:
     Python36:
       PYTHON_VERSION: '3.6'
-    Python37:
-      PYTHON_VERSION: '3.7'
   maxParallel: 2
 
 steps:
@@ -70,4 +68,4 @@ steps:
     feedsToUsePublish: 'internal'
     vstsFeedPublish: '941bab67-6f19-4958-88d8-65c9fbb78669/c1c5043d-b2ec-4496-adb0-c355f813b55a'
     vstsFeedPackagePublish: 'dhm-django-web-app'
-    versionOption: 'major'
+    versionOption: 'patch'
