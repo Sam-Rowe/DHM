@@ -55,3 +55,19 @@ steps:
     testRunTitle: 'Python $(PYTHON_VERSION)'
   condition: succeededOrFailed()
 
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: 'dhm'
+    includeRootFolder: false
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
+
+- task: UniversalPackages@0
+  inputs:
+    command: 'publish'
+    publishDirectory: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    feedsToUsePublish: 'internal'
+    vstsFeedPublish: '941bab67-6f19-4958-88d8-65c9fbb78669/c1c5043d-b2ec-4496-adb0-c355f813b55a'
+    vstsFeedPackagePublish: 'dhm-django-web-app'
+    versionOption: 'major'
