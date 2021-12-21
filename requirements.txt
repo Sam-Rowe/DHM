@@ -5,7 +5,7 @@ chardet==3.0.4
 configobj==5.0.6
 Cython==0.29.24
 dbus-python==1.2.16
-Django==3.1.13
+Django==3.1.14
 dulwich==0.19.15
 fastimport==0.9.8
 gunicorn==20.0.4
